@@ -1,0 +1,50 @@
+@import "../../styleVar.css";
+
+
+.header{
+    margin-bottom: 50px;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.list a {
+    color: $mainColor;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: right;
+    transition: all 150ms;
+}
+
+.title:first-letter {
+    letter-spacing: 12px;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.title:hover {
+    letter-spacing: 7px;
+}
+
+.tag {
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.tag span {
+    margin-left: 4px;
+}
+
+.content {
+    margin-bottom: 12px;
+}
+
+.time {
+    font-size: 12px;
+    font-style: italic;
+}
+

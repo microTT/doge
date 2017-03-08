@@ -1,0 +1,27 @@
+@import "../../styleVar.css";
+
+.header {
+    text-align: right;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.label {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.time {
+    margin-left: 26px;
+    display: inline-block;
+    font-style: italic;
+    font-size: 12px;
+    color: $normalColor;
+}
+
+.content {
+    margin-top: 36px;
+    line-height: 25px;
+}

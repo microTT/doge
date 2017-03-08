@@ -1,0 +1,29 @@
+@import "./styleVar.css";
+
+:global(*) {
+    box-sizing: border-box;
+}
+
+:global(body) {
+    margin: 0;
+    font-family: 'Hvd fonts brandongrotesque', sans-serif;
+    font-size: 18px;
+    color: $mainColor;
+    background: $bgColor;
+    letter-spacing: 2px;
+}
+
+:global(a) {
+    text-decoration: none;
+    color: $linkColor;
+}
+
+:global(a:hover) {
+    text-decoration: none;
+    color: $lightColor;
+}
+
+:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(div), :global(p) {
+    margin: 0;
+    padding: 0;
+}

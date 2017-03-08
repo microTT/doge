@@ -1,0 +1,30 @@
+@import "../../styleVar.css";
+
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 200px;
+}
+
+.header {
+    font-size: 78px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    text-align: right;
+    transform: translate(0, -16px);
+    transition: all 150ms;
+}
+
+.header a {
+    color: $mainColor;
+}
+
+.header:hover {
+    transform: translate(0, 16px);
+}
+
+.child-view {
+    margin-top: 150px;
+}
