@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import style from './index.css';
+import style from './index.pcss';
 
 export default class PostList extends Component {
     constructor(props, context) {

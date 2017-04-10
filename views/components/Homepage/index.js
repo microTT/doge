@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import style from './index.css';
+import style from './index.pcss';
 import MainMenu from '../MainMenu';
 
 export default class Homepage extends Component {

@@ -1,6 +1,6 @@
 import  React, { Component } from 'react';
 
-import style from './index.css';
+import style from './index.pcss';
 import { Link } from 'react-router';
 
 export default class Posts extends Component {

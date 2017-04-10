@@ -23,7 +23,7 @@ module.exports = {
                 presets: ['react', 'es2015']
             }
         }, {
-            test: /\.css$/,
+            test: /\.pcss$/,
             // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[path][name]--[local]--[hash:base64:5]!postcss-loader'),
             loaders: [
                 'style-loader',

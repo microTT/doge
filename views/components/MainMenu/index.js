@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import style from './index.css';
+import style from './index.pcss';
 
 export default class MainMenu extends Component {
     constructor(props, context) {
