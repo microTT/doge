@@ -1,0 +1,66 @@
+@import "../../styleVar.pcss";
+
+.panel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.color {
+  background-color: dimgrey;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.expand {
+  .color {
+    transform: scaleX(1.14) translate3d(0, 0, 0);
+  }
+}
+
+.shrink-left {
+  .color {
+    transform: scaleX(.93) translate3d(scale(100% *0.93), 0, 0);
+  }
+}
+
+.shrink-right {
+  .color {
+    transform: scaleX(.93) translate3d(scale(-100% *0.93), 0, 0);
+
+  }
+}
+
+.shrink-right {
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  padding: 47px 40px 0;
+  color: #fff;
+}
+
+.time {
+  font-size: 12px;
+}
+
+.title {
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.excerpt {
+  font-size: 15px;
+  line-height: 15px;
+  margin-top: 25px;
+  opacity: .5;
+  transition: all .3s;
+}

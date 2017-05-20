@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import style from './index.pcss';
-import MainMenu from '../MainMenu';
+import PostList from '../PostList';
+import PostPanel from '../PostPanel';
 
 export default class Homepage extends Component {
     constructor(props, context) {
@@ -11,20 +12,7 @@ export default class Homepage extends Component {
 
     render() {
         return (
-            <div className={style.home}>
-                <div className={style.menu}>
-                    <MainMenu><Link to="/posts">Posts</Link></MainMenu>
-                </div>
-                <div className={style.menu}>
-                    <MainMenu><Link to="/projects">Projects</Link></MainMenu>
-                </div>
-                <div className={style.menu}>
-                    <MainMenu><Link to="/contact">Contact</Link></MainMenu>
-                </div>
-                <div className={style.menu}>
-                    <MainMenu><Link to="/about">About</Link></MainMenu>
-                </div>
-            </div>
+            <PostList/>
         );
     }
 }
