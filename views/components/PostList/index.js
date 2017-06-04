@@ -10,19 +10,33 @@ export default class Posts extends Component {
         super(props);
         this.state = {
             postList: [{
-                backgroundColor: '#FC9'
+                style: {
+                    background: '#FC9'
+                }
             }, {
-                backgroundColor: '#F96'
+                style: {
+                    background: '#F96'
+                }
             }, {
-                backgroundColor: '#9C3'
+                style: {
+                    background: '#9C3'
+                }
             }, {
-                backgroundColor: '#F93'
+                style: {
+                    background: '#F93'
+                }
             }, {
-                backgroundColor: '#F60'
+                style: {
+                    background: '#F60'
+                }
             }, {
-                backgroundColor: '#369'
+                style: {
+                    background: '#369'
+                }
             }, {
-                backgroundColor: '#C93'
+                style: {
+                    background: '#C93'
+                }
             }]
         };
     }
@@ -30,30 +44,32 @@ export default class Posts extends Component {
     handleHover(type, index) {
         const postList = this.state.postList;
         let postListLength = postList.length;
-console.log(index);
-        let nextPost = Object.assign({}, postList[index]);
 
-        let leftPost = index > 0 ? Object.assign({}, postList[index - 1]) : null;
-        let rightPost = index < postListLength - 1 ? Object.assign({}, postList[index + 1]) : null;
-
+        let nextList;
         if (type === "over") {
-            leftPost && (leftPost.shrinkLeft = true);
-            nextPost.expand = true;
-            rightPost && (rightPost.shrinkRight = true);
-        } else if (type = "out") {
-            leftPost && (leftPost.shrinkLeft = false);
-            nextPost.expand = false;
-            rightPost && (rightPost.shrinkRight = false);
+            nextList = postList.filter((post, postIndex) => {
+                return postIndex != index;
+            }).map((post) => {
+                return Object.assign({}, post, {
+                    hovered: true
+                });
+            });
+
+            nextList.splice(index, 0, Object.assign({}, postList[index]));
+        } else if (type === "out") {
+            nextList = postList.filter((post, postIndex) => {
+                return postIndex != index;
+            }).map((post) => {
+                return Object.assign({}, post, {
+                    hovered: false
+                });
+            });
+
+            nextList.splice(index, 0, Object.assign({}, postList[index]));
         }
 
-        let changePostList = [nextPost];
-        leftPost && changePostList.unshift(leftPost);
-        rightPost && changePostList.push(rightPost);
-        let nextList = postList.slice();
-        let repalcePos = index - 1 >= 0 ? index - 1 : index;
-        nextList.splice(repalcePos, changePostList.length, ...changePostList);
 
-        console.log(nextList);
+
 
         this.state = this.setState(Object.assign({}, this.state, {
             postList: nextList

@@ -1,12 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import classNames from 'classnames';
+import colorFunction from 'css-color-function';
 
 import style from './index.pcss';
 
 export default class PostPanels extends Component {
     constructor(props, context) {
         super(props, context);
+        this.state = this.props.post;
     }
 
     render() {
@@ -17,7 +19,8 @@ export default class PostPanels extends Component {
                 [style['panel']]: true,
                 [style['shrinkLeft']]: post.shrinkLeft,
                 [style['expand']]: post.expand,
-                [style['shrinkRight']]: post.shrinkRight
+                [style['shrinkRight']]: post.shrinkRight,
+                [style['hovered']]: post.hovered
             })}>
                 <div className={style.content}>
                     <time className={style.time}>3 JUL 2014</time>
@@ -28,9 +31,7 @@ export default class PostPanels extends Component {
                         excerpt excerpt excerpt excerpt excerpt excerpt excerpt excerpt excerpt
                     </p>
                 </div>
-                <div className={style.color} style={{
-                    backgroundColor: post.backgroundColor
-                }}></div>
+                <div className={style.color} style={post.style}></div>
             </div>
         );
     }
