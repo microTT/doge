@@ -1,11 +1,40 @@
 @import "../../styleVar.pcss";
 
+.page {
+    display: flex;
+    min-height: 100%;
+}
+
+.prev {
+    flex: 1 1 auto;
+    order: 0;
+}
+
+.next {
+    flex: 1 1 auto;
+    order: 2;
+
+}
+
+.post {
+    flex: 0 0 auto;
+    order: 1;
+    width: 950px;
+    padding: 28px 150px 75px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d2d2d;
+}
+
 .header {
-    text-align: right;
+    text-align: center;
 }
 
 .title {
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 8px auto 0;
+    color: #2d2d2d;
 }
 
 .label {
@@ -14,14 +43,18 @@
 }
 
 .time {
-    margin-left: 26px;
-    display: inline-block;
-    font-style: italic;
+    color: #c8c8c8;
+    display: block;
     font-size: 12px;
-    color: $normalColor;
+    font-weight: 600;
+    padding: 0 2px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .content {
-    margin-top: 36px;
-    line-height: 25px;
+    margin: 9px 0 0;
+    p {
+        margin: 25px 0;
+    }
 }

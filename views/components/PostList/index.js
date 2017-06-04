@@ -10,35 +10,43 @@ export default class Posts extends Component {
         super(props);
         this.state = {
             postList: [{
+                id: 'post-1',
                 style: {
                     background: '#FC9'
                 }
             }, {
+                id: 'post-2',
                 style: {
                     background: '#F96'
                 }
             }, {
+                id: 'post-3',
                 style: {
                     background: '#9C3'
                 }
             }, {
+                id: 'post-4',
                 style: {
                     background: '#F93'
                 }
             }, {
+                id: 'post-5',
                 style: {
                     background: '#F60'
                 }
             }, {
+                id: 'post-6',
                 style: {
                     background: '#369'
                 }
             }, {
+                id: 'post-7',
                 style: {
                     background: '#C93'
                 }
             }]
         };
+        console.log(props);
     }
 
     handleHover(type, index) {

@@ -8,6 +8,7 @@ import PostPanel from '../PostPanel';
 export default class Homepage extends Component {
     constructor(props, context) {
         super(props, context);
+        console.log(props);
     }
 
     render() {
